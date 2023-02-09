@@ -1,0 +1,12 @@
+{
+  "name": "com.patchworkcoding.weightedarray",
+  "version": "1.0.0",
+  "displayName": "Weighted Array",
+  "description": "An easy way to create weighted tables for randomized selection that can be easily edited in the unity inspector",
+  "unity": "2019.1",
+  "author": {
+    "name": "PatchworkCoding",
+    "email": "theroyott@gmail.com",
+    "url": "http://royott.com/"
+  }
+}
