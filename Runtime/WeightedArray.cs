@@ -93,22 +93,24 @@ namespace PatchworkCoding.WeightedArray
             }
 
 
-            int _changedIndex = 0;
+            int _changedIndex = -1;
             int _weightSum = 0;
             //Checks to see if any of the weight values have changed
             for (int i = 0; i < m_previousWeightValues.Length; i++)
             {
                 if (m_previousWeightValues[i] != m_weights[i])
                 {
-                    if (Mathf.Sign(m_weights[i] - m_previousWeightValues[i]) > 0)
-                    {
-                        _changedIndex = i;
-                    }
+                    _changedIndex = i;
                 }
                 else
                 {
                     _weightSum += m_weights[i];
                 }
+            }
+
+            if (_changedIndex == -1)
+            {
+                return;
             }
 
             if (_weightSum + m_weights[_changedIndex] < 100)
@@ -119,7 +121,6 @@ namespace PatchworkCoding.WeightedArray
             {
                 m_isWeightSumFulfilled = true;
             }
-
 
             int _valuesToRedistro = _weightSum + m_weights[_changedIndex] - 100;
             int _iterationSinceLastChange = 0;
@@ -195,6 +196,23 @@ namespace PatchworkCoding.WeightedArray
         //Generates the text that will be displayed beside weight values in the editor
         private void GenerateWeightLabels()
         {
+            //int _weightLabelTotal = 1;
+            for (int i = 0; i < m_weights.Length; i++)
+            {
+                if (m_weights[i] == 0)
+                {
+                    m_weightLabel[i] = "not included";
+                }
+                else
+                {
+                    m_weightLabel[i] = m_weights[i] + "%";
+                }
+                //_weightLabelTotal += m_weights[i];
+            }
+        }
+        /*
+        private void GenerateWeightLabels()
+        {
             int _weightLabelTotal = 1;
             for (int i = 0; i < m_weights.Length; i++)
             {
@@ -209,7 +227,7 @@ namespace PatchworkCoding.WeightedArray
                 _weightLabelTotal += m_weights[i];
             }
         }
-
+        */
         //Resizes an array by copying values from one array into another array of the appropite size
         private T1[] ResizeArray<T1>(T1[] _arrayToResize, int _length, bool _copyLastValue = false)
         {
