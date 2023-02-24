@@ -1,5 +1,5 @@
 # Weighted Array
-![Weighted Array Showcase Betterest](https://user-images.githubusercontent.com/85509178/221259718-43992ddb-f62d-485c-a4db-15c41758419d.gif)
+![WeightedArray-Showcase-Bettererest-resized](https://user-images.githubusercontent.com/85509178/221260470-c774ad72-6288-4e21-83a9-1df5c6d63796.gif)
 
 ### Purpose:
 An easy way to create weighted tables for randomized selection that can be easily edited in the unity inpector
