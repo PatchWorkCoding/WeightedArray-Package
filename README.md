@@ -14,5 +14,5 @@ when adding the weighted array to your code you must be include:
 - **2.** ```GetElementAtIndex(int i)``` Gets an element at "i" index of the array
 
 ### Misc:
-If you need help or the package ends up breaking you can get in touch via email at [theroyott@gmail.com](theroyott@gmail.com) or through twitter [@patchworkcoding](https://twitter.com/patchworkcoding).
+If you need help or the package ends up breaking you can get in touch via email at [admin@roseott.dev](admin@roseott.dev) or through twitter [@patchworkcoding](https://twitter.com/patchworkcoding).
 <br>Hopefully y'all find it useful!</br>
